@@ -28,6 +28,8 @@ It combines concepts of **robotic kinematics, control systems, embedded programm
 ---
 
 ## 📁 Project Structure
+
+```bash
 .
 ├── code.m               # Main MATLAB simulation code
 ├── main.tex             # LaTeX report file
@@ -51,11 +53,14 @@ It combines concepts of **robotic kinematics, control systems, embedded programm
 ### 3. **Kinematics**
    
    a) **Forward Kinematics**:
-   x = L1 * cos(theta1) + L2 * cos(theta1 + theta2);  % X position of the end-effector
-   y = L1 * sin(theta1) + L2 * sin(theta1 + theta2);  % Y position of the end-effector
+   
+   - x = L1 * cos(theta1) + L2 * cos(theta1 + theta2);  % X position of the end-effector
+   
+   - y = L1 * sin(theta1) + L2 * sin(theta1 + theta2);  % Y position of the end-effector
 
    b) **Inverse Kinematics**:
-   θ2 = atan2(s2, c2) θ1 = atan2(y, x) − atan2(L2 * s2, L1 + L2 * c2)
+   
+   - θ2 = atan2(s2, c2) θ1 = atan2(y, x) − atan2(L2 * s2, L1 + L2 * c2)
 
 Where:
 - `L1`, `L2`: link lengths
