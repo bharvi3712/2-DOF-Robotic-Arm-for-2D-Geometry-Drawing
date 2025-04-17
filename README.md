@@ -43,9 +43,9 @@ It combines concepts of **robotic kinematics, control systems, embedded programm
 
 ## 🧠 How It Works
 
-- **MATLAB** takes user input (shape + parameters)
-- Computes required joint angles via **inverse kinematics**
-- Sends joint angles to **Arduino Nano** via **Serial Communication**
+- MATLAB takes user input (shape + parameters)
+- Computes required joint angles via inverse kinematics
+- Sends joint angles to Arduino Nano via Serial Communication
 - Arduino maps the angles to servo motor positions and controls movement
 - User sees simulated output in MATLAB and physical drawing via servo-controlled arm
 
@@ -53,12 +53,12 @@ It combines concepts of **robotic kinematics, control systems, embedded programm
 
 ## 🔢 Kinematics Logic
 
-**Forward Kinematics:**
+Forward Kinematics:
 ```math
 x = L1 * cos(θ1) + L2 * cos(θ1 + θ2)
 y = L1 * sin(θ1) + L2 * sin(θ1 + θ2)
 
-**Inverse Kinematics:**
+Inverse Kinematics:
 θ2 = atan2(s2, c2) θ1 = atan2(y, x) − atan2(L2 * s2, L1 + L2 * c2)
 
 Where:
