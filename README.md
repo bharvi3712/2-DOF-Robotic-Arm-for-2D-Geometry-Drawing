@@ -8,22 +8,22 @@ It combines concepts of **robotic kinematics, control systems, embedded programm
 
 ## 📌 Features
 
-- Simulates a 2-DOF robotic arm using MATLAB
-- Draws geometric shapes: circle, ellipse, and polygons
-- Implements forward and inverse kinematics
-- Real-time actuation with Arduino Nano and servo motors
-- User input-driven drawing system
-- Mechanical components designed using AutoCAD and fabricated at Tinkerer's Lab
+- Simulates a 2-DOF robotic arm using MATLAB  
+- Draws geometric shapes: circle, ellipse, and polygons  
+- Implements forward and inverse kinematics  
+- Real-time actuation with Arduino Nano and servo motors  
+- User input-driven drawing system  
+- Mechanical components designed using AutoCAD and fabricated at Tinkerer's Lab  
 
 ---
 
 ## 🛠️ Tools & Technologies
 
-- **MATLAB** – for simulation and kinematics
-- **Arduino IDE** – for servo control via embedded code
-- **AutoCAD** – for mechanical design
-- **Tinkerer's Lab (Nirma University)** – for prototyping and fabrication
-- **Servo motors + Arduino Nano** – for physical movement
+- **MATLAB** – for simulation and kinematics  
+- **Arduino IDE** – for servo control via embedded code  
+- **AutoCAD** – for mechanical design  
+- **Tinkerer's Lab (Nirma University)** – for prototyping and fabrication  
+- **Servo motors + Arduino Nano** – for physical movement  
 
 ---
 
@@ -39,10 +39,11 @@ It combines concepts of **robotic kinematics, control systems, embedded programm
 ├── imag_3.png           # Simulation screenshot
 ├── video.mp4            # Simulation demo video
 └── README.md            # Project Description
+```
 
 ---
 
-**## 🧠 How It Works**
+## 🧠 How It Works
 
 ### 1. **User Input**
    The user selects a shape (circle, ellipse, or polygon) and provides the required parameters such as radius or coordinates.
@@ -54,13 +55,14 @@ It combines concepts of **robotic kinematics, control systems, embedded programm
    
    a) **Forward Kinematics**:
    
-   - x = L1 * cos(theta1) + L2 * cos(theta1 + theta2);  % X position of the end-effector
+   - `x = L1 * cos(theta1) + L2 * cos(theta1 + theta2);`
    
-   - y = L1 * sin(theta1) + L2 * sin(theta1 + theta2);  % Y position of the end-effector
+   - `y = L1 * sin(theta1) + L2 * sin(theta1 + theta2);`
 
    b) **Inverse Kinematics**:
    
-   - θ2 = atan2(s2, c2) θ1 = atan2(y, x) − atan2(L2 * s2, L1 + L2 * c2)
+   - `θ2 = atan2(s2, c2)`  
+   - `θ1 = atan2(y, x) − atan2(L2 * s2, L1 + L2 * c2)`
 
 Where:
 - `L1`, `L2`: link lengths
