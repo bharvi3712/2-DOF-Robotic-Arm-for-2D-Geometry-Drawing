@@ -28,7 +28,6 @@ It combines concepts of **robotic kinematics, control systems, embedded programm
 ---
 
 ## 📁 Project Structure
-```bash
 .
 ├── code.m               # Main MATLAB simulation code
 ├── main.tex             # LaTeX report file
@@ -43,23 +42,20 @@ It combines concepts of **robotic kinematics, control systems, embedded programm
 
 ## 🧠 How It Works
 
-- MATLAB takes user input (shape + parameters)
-- Computes required joint angles via inverse kinematics
-- Sends joint angles to Arduino Nano via Serial Communication
-- Arduino maps the angles to servo motor positions and controls movement
-- User sees simulated output in MATLAB and physical drawing via servo-controlled arm
+### 1. **User Input**
+   The user selects a shape (circle, ellipse, or polygon) and provides the required parameters such as radius or coordinates.
 
----
+### 2. **MATLAB Simulation**
+   MATLAB calculates the required joint angles for the robotic arm to trace the shape using inverse kinematics.
 
-## 🔢 Kinematics Logic
+### 3. **Kinematics**
+   
+   a) **Forward Kinematics**:
+   x = L1 * cos(theta1) + L2 * cos(theta1 + theta2);  % X position of the end-effector
+   y = L1 * sin(theta1) + L2 * sin(theta1 + theta2);  % Y position of the end-effector
 
-Forward Kinematics:
-```math
-x = L1 * cos(θ1) + L2 * cos(θ1 + θ2)
-y = L1 * sin(θ1) + L2 * sin(θ1 + θ2)
-
-Inverse Kinematics:
-θ2 = atan2(s2, c2) θ1 = atan2(y, x) − atan2(L2 * s2, L1 + L2 * c2)
+   b) **Inverse Kinematics**:
+   θ2 = atan2(s2, c2) θ1 = atan2(y, x) − atan2(L2 * s2, L1 + L2 * c2)
 
 Where:
 - `L1`, `L2`: link lengths
