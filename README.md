@@ -42,7 +42,7 @@ It combines concepts of **robotic kinematics, control systems, embedded programm
 
 ---
 
-## 🧠 How It Works
+**## 🧠 How It Works**
 
 ### 1. **User Input**
    The user selects a shape (circle, ellipse, or polygon) and provides the required parameters such as radius or coordinates.
